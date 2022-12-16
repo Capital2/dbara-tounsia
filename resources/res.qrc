@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="image">
+    <file>Screenshot_20221111_142335.png</file>
+    <file>basket.jpeg</file>
+  </qresource>
+</RCC>
