@@ -38,8 +38,17 @@ class Window(QMainWindow, Ui_MainWindow):
     def suggest_recipe(self):
         engine = RecipeSystem()
         engine.ingredients = [self.ing.item(x).text() for x in range(self.ing.count())]
+        engine.reset()
         engine.run()
-        QMessageBox.information(self, "Sa7a", f"<p>{engine.recipe}</p>")
+
+        st = ""
+        if not engine.recipes:
+            st = "<p>ma3andek mattayeb, barra lel resto ya fa9ri</p>"
+        else:
+            for recipe in engine.recipes:
+                st += f"<p>{recipe}</p>"
+
+        QMessageBox.about(self, "Suggested recipes", st)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

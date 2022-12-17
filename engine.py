@@ -4,7 +4,7 @@ class RecipeSystem(KnowledgeEngine):
     def __init__(self):
         super().__init__()
         self.ingredients = None
-        self.recipe = None
+        self.recipes = []
 
     @DefFacts()
     def _initial_action(self):
@@ -66,7 +66,7 @@ class RecipeSystem(KnowledgeEngine):
     @Rule(Fact(action='end'), Fact(recipe=MATCH.recipe))
     def display_recipe(self, recipe):
         print("The suggested recipe is: " + recipe)
-        self.recipe = "The suggested recipe is: " + recipe
+        self.recipes.append(recipe)
 
 if __name__ == '__main__':
     expert = RecipeSystem()
