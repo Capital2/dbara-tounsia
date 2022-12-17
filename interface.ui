@@ -10,11 +10,15 @@
     <x>0</x>
     <y>0</y>
     <width>744</width>
-    <height>440</height>
+    <height>455</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dbara Tounsia</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>resources/logo.png</normaloff>resources/logo.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true"/>
@@ -316,16 +320,6 @@ background-color: #3498db;</string>
    <zorder>verticalSpacer</zorder>
    <zorder>horizontalSpacer</zorder>
    <zorder>horizontalSpacer_2</zorder>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>744</width>
-     <height>30</height>
-    </rect>
-   </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
