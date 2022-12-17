@@ -61,6 +61,11 @@ class RecipeSystem(KnowledgeEngine):
     @Rule(Fact(action='suggest_recipe'), Fact("thon"), Fact("poivron"), Fact("tomate"), Fact("fromage"), Fact(W()), Fact(W()), Fact(W()), Fact(W()), Fact(W()), Fact(W()))
     def pizza_thon(self):
         self.declare(Fact(recipe="Pizza Thon"))
+
+
+    @Rule(Fact(action='suggest_recipe'), Fact("viande"),  Fact("tomate"), Fact("piment"), Fact(), Fact(W()), Fact(W()), Fact(W()), Fact(W()), Fact(W()), Fact(W()))
+    def pizza_thon(self):
+        self.declare(Fact(recipe="Ma9rouna Sansa"))
     
 
     @Rule(Fact(action='end'), Fact(recipe=MATCH.recipe))
