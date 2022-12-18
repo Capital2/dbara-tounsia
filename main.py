@@ -56,7 +56,7 @@ class Window(QMainWindow, Ui_MainWindow):
         else:
             for recipe in engine.recipes:
                 st += f"<p>{recipe}</p>"
-
+            st += "<p>" + "&nbsp;"*69+ "</p>"
         QMessageBox.about(self, "Suggested recipes", st)
 
 if __name__ == "__main__":
