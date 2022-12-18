@@ -1,6 +1,7 @@
 <RCC>
   <qresource prefix="resources">
     <file>Screenshot_20221111_142335.png</file>
+    <file>logo.png</file>
     <file>basket.jpeg</file>
   </qresource>
 </RCC>

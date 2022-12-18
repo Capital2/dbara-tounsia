@@ -21,7 +21,8 @@
     <normaloff>resources/logo.png</normaloff>resources/logo.png</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">
+</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -269,10 +270,10 @@ background-color: #3498db;</string>
           <item row="1" column="0">
            <widget class="QListWidget" name="ing">
             <property name="styleSheet">
-             <string notr="true"/>
+             <string notr="true">border-image: url(resources/logo.png) 0 0 0 0 stretch stretch;</string>
             </property>
             <property name="frameShape">
-             <enum>QFrame::Box</enum>
+             <enum>QFrame::NoFrame</enum>
             </property>
             <property name="selectionRectVisible">
              <bool>false</bool>
@@ -334,12 +335,12 @@ background-color: #3498db;</string>
    <slot>clear()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>487</x>
-     <y>314</y>
+     <x>542</x>
+     <y>300</y>
     </hint>
     <hint type="destinationlabel">
-     <x>451</x>
-     <y>205</y>
+     <x>506</x>
+     <y>175</y>
     </hint>
    </hints>
   </connection>
@@ -350,8 +351,8 @@ background-color: #3498db;</string>
    <slot>addToIng()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>308</x>
-     <y>183</y>
+     <x>353</x>
+     <y>159</y>
     </hint>
     <hint type="destinationlabel">
      <x>371</x>
@@ -366,8 +367,8 @@ background-color: #3498db;</string>
    <slot>removeFromIng()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>308</x>
-     <y>252</y>
+     <x>353</x>
+     <y>232</y>
     </hint>
     <hint type="destinationlabel">
      <x>369</x>
@@ -382,8 +383,8 @@ background-color: #3498db;</string>
    <slot>suggest_recipe()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>295</x>
-     <y>364</y>
+     <x>318</x>
+     <y>379</y>
     </hint>
     <hint type="destinationlabel">
      <x>289</x>
@@ -407,10 +408,27 @@ background-color: #3498db;</string>
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update_ing_view()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>599</x>
+     <y>288</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>618</x>
+     <y>335</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>addToIng()</slot>
   <slot>removeFromIng()</slot>
   <slot>suggest_recipe()</slot>
+  <slot>update_ing_view()</slot>
  </slots>
 </ui>

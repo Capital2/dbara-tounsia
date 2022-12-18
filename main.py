@@ -15,6 +15,13 @@ class Window(QMainWindow, Ui_MainWindow):
         super().__init__(parent)
         self.setupUi(self)
     
+    def update_ing_view(self):
+        if self.ing.count():
+            self.ing.setStyleSheet("")
+        else:
+            self.ing.setStyleSheet("border-image: url(resources/logo.png) 0 0 0 0 stretch stretch;")
+
+
     def addToIng(self):
         selected = self.alling.selectedItems()
         
@@ -26,6 +33,7 @@ class Window(QMainWindow, Ui_MainWindow):
             return # item added already
         
         self.ing.addItems([i.text() for i in selected])
+        self.update_ing_view()
         # self.alling.removeItemWidget(selected[0])
     
     def removeFromIng(self):
@@ -34,6 +42,7 @@ class Window(QMainWindow, Ui_MainWindow):
             return
 
         self.ing.takeItem(self.ing.row(selected[0]))
+        self.update_ing_view()
     
     def suggest_recipe(self):
         engine = RecipeSystem()

@@ -19,7 +19,8 @@ class Ui_MainWindow(object):
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("resources/logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
-        MainWindow.setStyleSheet("")
+        MainWindow.setStyleSheet("\n"
+"")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
@@ -109,8 +110,8 @@ class Ui_MainWindow(object):
         self.pushButton_2.setObjectName("pushButton_2")
         self.gridLayout_2.addWidget(self.pushButton_2, 2, 0, 1, 1)
         self.ing = QtWidgets.QListWidget(self.centralwidget)
-        self.ing.setStyleSheet("")
-        self.ing.setFrameShape(QtWidgets.QFrame.Box)
+        self.ing.setStyleSheet("border-image: url(resources/logo.png) 0 0 0 0 stretch stretch;")
+        self.ing.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.ing.setSelectionRectVisible(False)
         self.ing.setObjectName("ing")
         self.gridLayout_2.addWidget(self.ing, 1, 0, 1, 1)
@@ -137,6 +138,7 @@ class Ui_MainWindow(object):
         self.pushButton_3.clicked.connect(MainWindow.removeFromIng) # type: ignore
         self.pushButton_4.clicked.connect(MainWindow.suggest_recipe) # type: ignore
         self.alling.doubleClicked['QModelIndex'].connect(MainWindow.addToIng) # type: ignore
+        self.pushButton_2.clicked.connect(MainWindow.update_ing_view) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
